@@ -1,9 +1,12 @@
-FROM cfinfrastructure/minimal
+FROM ubuntu:14.04
 MAINTAINER https://github.com/christianang/bbl-docker
 
 RUN \
       apt-get update && \
       apt-get -qqy install --fix-missing \
+            build-essential \
+            curl \
+            wget \
             awscli \
       && \
       apt-get clean
